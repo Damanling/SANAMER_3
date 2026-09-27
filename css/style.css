@@ -15,10 +15,7 @@ a:hover, a:focus { color:var(--blue-dark); }
 
 .site-header, .site-footer { background:var(--blue); color:#fff; }
 
-/* =========================================================
-   MOBILE FIRST: базовые правила — смартфоны (портрет).
-   Грузятся первыми, без media query.
-   ========================================================= */
+   /*смартфон.*/
 
 .header-inner, .page-content, .footer-inner {
     width:100%;
@@ -41,7 +38,6 @@ a:hover, a:focus { color:var(--blue-dark); }
 .brand:hover, .brand:focus { color:#fff; }
 .brand-logo { display:grid; place-items:center; width:62px; height:62px; border:2px solid #fff; border-radius:50%; font-size:2rem; }
 
-/* На смартфоне ссылки главного меню — вертикальный список */
 .site-nav {
     display:flex;
     flex-direction:column;
@@ -52,7 +48,6 @@ a:hover, a:focus { color:var(--blue-dark); }
 .site-nav a { color:#fff; padding:9px 12px; border-radius:4px; text-decoration:none; }
 .site-nav a:hover, .site-nav a:focus { background:rgba(255,255,255,.18); color:#fff; }
 
-/* Контент — тоже flex-контейнер, чтобы работал order (п.3) */
 .page-content {
     display:flex;
     flex-direction:column;
@@ -60,8 +55,6 @@ a:hover, a:focus { color:var(--blue-dark); }
     padding-bottom:48px;
 }
 
-/* На смартфоне таблица визуально выше списка ссылок,
-   хотя в HTML список стоит раньше таблицы */
 #schedule { order:-1; }
 
 .content-section { margin-bottom:24px; padding:20px; background:var(--surface); border:1px solid var(--border); border-radius:8px; box-shadow:0 2px 8px rgba(22,55,79,.06); }
@@ -110,10 +103,8 @@ button:hover, button:focus { background:var(--blue-dark); }
 .site-footer { padding:26px 0; }
 .footer-inner { text-align:center; }
 
-/* =========================================================
-   MOBILE FIRST: правила для планшетов и десктопов
-   подключаются через min-width media query.
-   ========================================================= */
+/*планшет.*/
+
 @media (min-width:681px) {
     .header-inner, .page-content, .footer-inner {
         width:min(960px, calc(100% - 32px));
